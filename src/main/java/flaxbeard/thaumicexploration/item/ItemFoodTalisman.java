@@ -21,7 +21,6 @@ public class ItemFoodTalisman extends Item {
 	public ItemFoodTalisman(int par1) {
 		super();
 		this.maxStackSize = 1;
-		//this.setMaxDamage(100);
 	}
 
 
@@ -37,7 +36,6 @@ public class ItemFoodTalisman extends Item {
 			par1ItemStack.stackTagCompound.setFloat("food", 0);
 		}
     	par3List.add("Currently holds " + (int)par1ItemStack.stackTagCompound.getFloat("food") + " food points and " + (int)par1ItemStack.stackTagCompound.getFloat("saturation") + " saturation points.");
-    	//super.addInformation(par1ItemStack, par2EntityPlayer, par3List, par4);
     }
 
 	@Override
@@ -88,7 +86,7 @@ public class ItemFoodTalisman extends Item {
 					finalSat = sat - (20 - player.getFoodStats().getFoodLevel());
 					sat = 20 - player.getFoodStats().getFoodLevel();
 				}
-				//ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),  (int) (player.getFoodStats().getFoodLevel() + sat), "field_75127_a");
+				ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),  (int) (player.getFoodStats().getFoodLevel() + sat), "foodLevel");
 				par1ItemStack.stackTagCompound.setFloat("food", finalSat);
 				par1ItemStack.setItemDamage(par1ItemStack.getItemDamage());
 			}
@@ -99,7 +97,7 @@ public class ItemFoodTalisman extends Item {
 					finalSat = sat - (player.getFoodStats().getFoodLevel() - player.getFoodStats().getSaturationLevel());
 					sat = player.getFoodStats().getFoodLevel() - player.getFoodStats().getSaturationLevel();	
 				}
-				//ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),(player.getFoodStats().getFoodLevel() + sat), "field_75125_b");
+				ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),(player.getFoodStats().getFoodLevel() + sat), "foodSaturationLevel");
 				par1ItemStack.stackTagCompound.setFloat("saturation", finalSat);
 				par1ItemStack.setItemDamage(par1ItemStack.getItemDamage());
 			}
