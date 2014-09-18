@@ -85,8 +85,7 @@ public class ItemFoodTalisman extends Item {
 					finalSat = sat - (20 - player.getFoodStats().getFoodLevel());
 					sat = 20 - player.getFoodStats().getFoodLevel();
 				}
-				try {ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),  (int) (player.getFoodStats().getFoodLevel() + sat), "field_75127_a");} catch (Exception e) {if (e instanceof NoSuchFieldException){ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),  (int) (player.getFoodStats().getFoodLevel() + sat), "foodLevel");} else {e.printStackTrace();}}
-				par1ItemStack.stackTagCompound.setFloat("food", finalSat);
+				ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),  (int) (player.getFoodStats().getFoodLevel() + sat), "field_75127_a", "foodLevel");
 				par1ItemStack.setItemDamage(par1ItemStack.getItemDamage());
 			}
 			if ((player.getFoodStats().getSaturationLevel() < player.getFoodStats().getFoodLevel()) && par1ItemStack.stackTagCompound.getFloat("saturation") > 0) {
@@ -96,7 +95,7 @@ public class ItemFoodTalisman extends Item {
 					finalSat = sat - (player.getFoodStats().getFoodLevel() - player.getFoodStats().getSaturationLevel());
 					sat = player.getFoodStats().getFoodLevel() - player.getFoodStats().getSaturationLevel();	
 				}
-				try {ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),(player.getFoodStats().getFoodLevel() + sat), "field_75125_b");} catch (Exception e) {if (e instanceof NoSuchFieldException){ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),  (int) (player.getFoodStats().getFoodLevel() + sat), "foodSaturationLevel");} else {e.printStackTrace();}}
+				ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),  (player.getFoodStats().getFoodLevel() + sat), "field_75125_b", "foodSaturationLevel");
 				par1ItemStack.stackTagCompound.setFloat("saturation", finalSat);
 				par1ItemStack.setItemDamage(par1ItemStack.getItemDamage());
 			}
