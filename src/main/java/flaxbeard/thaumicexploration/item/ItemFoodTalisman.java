@@ -58,7 +58,6 @@ public class ItemFoodTalisman extends Item {
 					ItemStack food = player.inventory.getStackInSlot(i);
 					if (isEdible(food, player)) {
 						float sat = ((ItemFood)food.getItem()).func_150906_h(food) * 2;
-
 						float heal = ((ItemFood)food.getItem()).func_150905_g(food);
 						if (par1ItemStack.stackTagCompound.getFloat("food")+(int)heal < 100) {
 							if (par1ItemStack.stackTagCompound.getFloat("saturation") + sat <= 100) {
@@ -86,7 +85,7 @@ public class ItemFoodTalisman extends Item {
 					finalSat = sat - (20 - player.getFoodStats().getFoodLevel());
 					sat = 20 - player.getFoodStats().getFoodLevel();
 				}
-				ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),  (int) (player.getFoodStats().getFoodLevel() + sat), "foodLevel");
+				try {ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),  (int) (player.getFoodStats().getFoodLevel() + sat), "field_75127_a");} catch (Exception e) {if (e instanceof NoSuchFieldException){ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),  (int) (player.getFoodStats().getFoodLevel() + sat), "foodLevel");} else {e.printStackTrace();}}
 				par1ItemStack.stackTagCompound.setFloat("food", finalSat);
 				par1ItemStack.setItemDamage(par1ItemStack.getItemDamage());
 			}
@@ -97,7 +96,7 @@ public class ItemFoodTalisman extends Item {
 					finalSat = sat - (player.getFoodStats().getFoodLevel() - player.getFoodStats().getSaturationLevel());
 					sat = player.getFoodStats().getFoodLevel() - player.getFoodStats().getSaturationLevel();	
 				}
-				ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),(player.getFoodStats().getFoodLevel() + sat), "foodSaturationLevel");
+				try {ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),(player.getFoodStats().getFoodLevel() + sat), "field_75125_b");} catch (Exception e) {if (e instanceof NoSuchFieldException){ObfuscationReflectionHelper.setPrivateValue(FoodStats.class, player.getFoodStats(),  (int) (player.getFoodStats().getFoodLevel() + sat), "foodSaturationLevel");} else {e.printStackTrace();}}
 				par1ItemStack.stackTagCompound.setFloat("saturation", finalSat);
 				par1ItemStack.setItemDamage(par1ItemStack.getItemDamage());
 			}
