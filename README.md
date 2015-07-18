@@ -1,6 +1,6 @@
 Thaumic Exploration
 ===================
-The newest release is Alpha 0.3.0, released at 5:50 PM GMT on January 6
+The newest release is Alpha 0.3.0, released at 5:50 PM GMT on January 6.
 
 Releases can be found here: https://github.com/Flaxbeard/Thaumic_Exploration/releases
 
@@ -16,3 +16,5 @@ Current content includes:
  - The Think Tank, a monstrosity that converts books and enchanted books into the ever-elusive knowledge fragments.
  - Work in progress Necromancy focus, allowing you to raise the dead.
  - The Everfull Urn, a remake of the Thaumcraft 2 item that acts as an infinite water supply, and more!
+ 
+
