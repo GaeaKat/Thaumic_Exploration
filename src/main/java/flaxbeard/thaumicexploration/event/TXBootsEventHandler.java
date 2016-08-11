@@ -232,7 +232,7 @@ public class TXBootsEventHandler
         	}
         }
         if (player.getActivePotionEffect(PotionFluxTaint.instance) != null) {
-        	for (int i = 0; i<10; i++) {
+        	for (int i = 0; i<player.inventory.getSizeInventory(); i++) { {
     			if (player.inventory.getStackInSlot(i) != null && player.inventory.getStackInSlot(i).getItem() == ThaumicExploration.charmTaint) {
         		player.removePotionEffect(PotionFluxTaint.instance.id);
 				break;
