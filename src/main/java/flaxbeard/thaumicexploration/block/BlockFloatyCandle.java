@@ -72,4 +72,9 @@ public class BlockFloatyCandle extends BlockCandle implements ITileEntityProvide
 		// TODO Auto-generated method stub
 		return new TileEntityFloatyCandle();
 	}
+	
+	@Override
+	public boolean canStabaliseInfusion(World world, int x, int y, int z) {
+	return true;
+	}
 }
