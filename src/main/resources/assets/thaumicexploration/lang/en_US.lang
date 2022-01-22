@@ -36,12 +36,12 @@ thaumicexploration.bread3=Bonjour, monsieur.
 thaumicexploration.bread4=Mangez-moi, s'il vous plait.
 
 
-item.thaumicexploration:discountRing:0.name=Ring of Air
-item.thaumicexploration:discountRing:1.name=Ring of Earth
-item.thaumicexploration:discountRing:2.name=Ring of Fire
-item.thaumicexploration:discountRing:3.name=Ring of Water
-item.thaumicexploration:discountRing:4.name=Ring of Order
-item.thaumicexploration:discountRing:5.name=Ring of Entropy
+item.thaumicexploration:discountRing:0.name=Ring of Aer
+item.thaumicexploration:discountRing:1.name=Ring of Terra
+item.thaumicexploration:discountRing:2.name=Ring of Ignis
+item.thaumicexploration:discountRing:3.name=Ring of Aqua
+item.thaumicexploration:discountRing:4.name=Ring of Ordo
+item.thaumicexploration:discountRing:5.name=Ring of Perditio
 
 tc.aspect.Necromantic Energy=Energy of the Undead
 
@@ -147,6 +147,7 @@ tile.thaumicexploration:replicator.name=Thaumic Replicator
 tile.thaumicexploration:trashJar.name=Oblivion Jar
 tile.thaumicexploration:soulBrazier.name=Soul Brazier
 tile.boundJar.name=Bound Jar
+tile.boundChest.name=Bound Chest
 tile.thaumicexploration:floatCandle.0.name=White Floating Candle
 tile.thaumicexploration:floatCandle.1.name=Orange Floating Candle
 tile.thaumicexploration:floatCandle.2.name=Magenta Floating Candle
@@ -163,12 +164,13 @@ tile.thaumicexploration:floatCandle.12.name=Brown Floating Candle
 tile.thaumicexploration:floatCandle.13.name=Green Floating Candle
 tile.thaumicexploration:floatCandle.14.name=Red Floating Candle
 tile.thaumicexploration:floatCandle.15.name=Black Floating Candle
+tile.thaumicexploration:autoSorter.name=Auto-sorter
 
 ----Thaumonomicon Entries----
 te.researchPrefix=[TX]
 tc.research_category.TAINT=Tainturgy
 tc.research_category.NECROMANCY=Necromancy
-tc.research_category.TX=Thaumic Esoterica
+tc.research_category.TX=Thaumic Exploration
 
 --Oblivion Jar
 te.name.TRASHJAR=Oblivion Jar
@@ -195,12 +197,12 @@ te.text.DISCOUNTRINGS.1=You have found a way to reduce the amount of vis used by
 --Thaumostatic Stabilizer
 te.name.STABILIZERBELT=Thaumostatic Stabilizer
 te.tag.STABILIZERBELT=Knockback nullifier
-te.text.STABILIZERBELT.1=Using similar technology to that found in the thaumostatic harness, you've created a special belt that nullifies the effect of knockback.<BR><BR>Any time you take damage, instead of being knocked around, you will instead remain in place. You have found this device to be extremely useful for not only flying using the harness, but also and travel at night.
+te.text.STABILIZERBELT.1=Using similar technology to that found in the thaumostatic harness, you've created a special belt that nullifies the effect of knockback.<BR><BR>Any time you take damage, instead of being knocked around, you will instead remain in place. You have found this device to be extremely useful for not only flying using the harness, but also for travel at night.
 
 --Floating Candles
 te.name.FLOATCANDLE=Floating Candles
 te.tag.FLOATCANDLE=Wingardium Leviosa
-te.text.FLOATCANDLE.1=You always have felt that tallow candles are missing something... A touch of magic and an Aer shard should be enough to make them look right at home in any respected wizarding school. Floating candles can be placed in midair without a surface beneath them. These candles bob pleasingly, and add a touch of magic to any room.<BR><BR>Unfortunately, the candles don't seem to have an effect on infusion. You are sure that this will be fixed in the near future.
+te.text.FLOATCANDLE.1=You always have felt that tallow candles are missing something... A touch of magic and an Aer shard should be enough to make them look right at home in any respected wizarding school. Floating candles can be placed in midair without a surface beneath them. These candles bob pleasingly, and add a touch of magic to any room.<BR><BR>Like their more mundane counterparts, they can also be used to stabilise infusions.
 
 --Flesh Curing
 te.name.FLESHCURE=Flesh Purification
@@ -298,7 +300,7 @@ te.text.DREAMCATCHER.1=They say that dreamcatchers are meant to stop nightmares 
 --Talisman of Nourishment
 te.name.TALISMANFOOD=Talisman of Nourishment
 te.tag.TALISMANFOOD=Everfull belly
-te.text.TALISMANFOOD.1=You often find yourself needing to take breaks during marathon researching sessions to satisfy your hunger. Finally you have found a way to get past your need for food.<BR><BR>By infusing a diamond with the essence of hunger, you have created an item that is able to suck the nourishing energy from various food items in your hotbar and store this energy within. It will then automatically replenish your food meter if it is depleted.<BR><BR>This device will only work on simple food items, so foods that invoke effects such as Rotten Flesh and Golden Apples must be consumed normally.
+te.text.TALISMANFOOD.1=You often find yourself needing to take breaks during marathon researching sessions to satisfy your hunger. Finally you have found a way to get past your need for food.<BR><BR>By infusing a ruby with the essence of hunger, you have created an item that is able to suck the nourishing energy from various food items in your hotbar and store this energy within. It will then automatically replenish your food meter if it is depleted.<BR><BR>This device will only work on simple food items, so foods that invoke effects such as Rotten Flesh and Golden Apples must be consumed normally.
 
 --Disarming Enchantment
 te.name.ENCHDISARM=Enchantment: Disarming
